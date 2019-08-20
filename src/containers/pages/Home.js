@@ -46,13 +46,13 @@ const Home = () => (
           text={messages.appWelcome}
         />
       </CenteredCol>
-      <CenteredCol md="12" lg="12" xs="12"> 
+      <CenteredCol md="12" lg="12" xs="12">
         <Image alt={messages.appName} src={appSettings.homeBackground}></Image>
       </CenteredCol>
-      <CenteredCol md="12" lg="12" xs="12"> 
+      <CenteredCol md="12" lg="12" xs="12">
         <Caption>{messages.appCaption}</Caption>
       </CenteredCol>
-      <CenteredCol md="12" lg="12" xs="12"> 
+      <CenteredCol md="12" lg="12" xs="12">
         <CustomNavLink
           to="/countries"
           exact
