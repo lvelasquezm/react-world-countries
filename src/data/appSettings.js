@@ -6,5 +6,6 @@ export default {
     'width=device-width, ' +
     'initial-scale=1, ' +
     'shrink-to-fit=no, ' +
-    'viewport-fit=cover'
+    'viewport-fit=cover',
+  homeBackground: 'https://www.vinilodekorativo.com/642/mapamundi-hexagonos.jpg'
 };

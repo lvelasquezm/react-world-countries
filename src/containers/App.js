@@ -12,6 +12,10 @@ import { appSettings } from '../data';
 const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Sarabun:200i,400,800');
 
+  * {
+    transition: all .2s ease;
+  }
+
   html {
     font-size: ${props => props.theme.fontBaseSize};
   }
