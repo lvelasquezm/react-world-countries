@@ -115,14 +115,14 @@ const Country = ({ match }) => {
             </Col>
           </Row>
           <Row>
-          <CenteredCol md="12" lg="12" xs="12">
-            <CustomNavLink
-              to="/countries"
-              exact
-            >
-              {messages.appCtaBack}
-            </CustomNavLink>
-          </CenteredCol>
+            <CenteredCol md="12" lg="12" xs="12">
+              <CustomNavLink
+                to="/countries"
+                exact
+              >
+                {messages.appCtaBack}
+              </CustomNavLink>
+            </CenteredCol>
           </Row>
         </Container>
       );
