@@ -62,7 +62,7 @@ const Country = ({ match }) => {
 
     if (loading) {
       content = <Loader />;
-    } else if (error) {
+    } else if (error || !data || !data.country) {
       content = <p>{messages.errorLoadingCountry}</p>;
     } else {
       content = (
