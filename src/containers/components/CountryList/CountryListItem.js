@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { withRouter } from 'react-router-dom';
 import { Container, Row, Col } from 'styled-bootstrap-grid';
 
 import Title from '../../components/Title';
@@ -126,8 +127,8 @@ const ItemMeta = styled.div`
   }
 `;
 
-const CountryListItem = ({ country }) => (
-  <ItemContainer>
+const CountryListItem = ({ country, history }) => (
+  <ItemContainer onClick={() => history.push(`/countries/${country.code}`)}>
     <Row>
       <Col md="12" lg="12" xs="12">
         <CustomTitle
@@ -157,4 +158,4 @@ const CountryListItem = ({ country }) => (
   </ItemContainer>
 );
 
-export default CountryListItem;
+export default withRouter(CountryListItem);
