@@ -9,4 +9,5 @@ export default {
     'viewport-fit=cover',
   homeBackground: 'https://www.vinilodekorativo.com/642/mapamundi-hexagonos.jpg',
   itemsPerPage: 40,
+  graphqlUri: 'https://countries.trevorblades.com/graphql'
 };
