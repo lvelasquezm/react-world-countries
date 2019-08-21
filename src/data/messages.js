@@ -16,5 +16,6 @@ export default {
   areaCode: 'Area Code (Phone Code)',
   languagesSpoken: 'Languages they speak',
   nativeHelper: ' which in their native is ',
-  currenciesUsed: 'Currencies they use'
+  currenciesUsed: 'Currencies they use',
+  errorLoadingCountries: 'There was an error loading the country list.'
 };

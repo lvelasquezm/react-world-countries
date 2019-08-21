@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import { Col } from 'styled-bootstrap-grid';
 
 export const centerFlex = css`
@@ -19,4 +19,14 @@ export const badge = css`
   min-width: 50px;
   padding: 2px 5px;
   text-align: center;
+`;
+
+export const rotateAnimation = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 `;
