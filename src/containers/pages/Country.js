@@ -2,12 +2,14 @@ import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import styled from 'styled-components';
 import { Container, Row, Col } from 'styled-bootstrap-grid';
+import { NavLink } from 'react-router-dom';
 
 import Title from '../components/Title';
 import Loader from '../components/Loader';
 
 import { messages } from '../../data';
 import { getCountry } from '../../utils/queries';
+import { CenteredCol, cta } from '../../utils/styles';
 
 const CustomTitle = styled(Title)`
   margin-bottom: 20px;
@@ -46,6 +48,10 @@ const InfoBox = styled.div`
       font-weight: bold;
     }
   }
+`;
+
+const CustomNavLink = styled(NavLink)`
+  ${cta}
 `;
 
 const Country = ({ match }) => {
@@ -107,6 +113,16 @@ const Country = ({ match }) => {
                 <span>{data.country.currency}</span>
               </InfoBox>
             </Col>
+          </Row>
+          <Row>
+          <CenteredCol md="12" lg="12" xs="12">
+            <CustomNavLink
+              to="/countries"
+              exact
+            >
+              {messages.appCtaBack}
+            </CustomNavLink>
+          </CenteredCol>
           </Row>
         </Container>
       );

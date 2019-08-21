@@ -30,3 +30,17 @@ export const rotateAnimation = keyframes`
     transform: rotate(360deg);
   }
 `;
+
+export const cta = css`
+  background-color: ${props => props.theme.btnBackground};
+  border-radius: 3px;
+  color: ${props => props.theme.white};
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 20px;
+  width: auto;
+
+  &:hover {
+    background-color: ${props => props.theme.btnBackgroundHover};
+  }
+`;

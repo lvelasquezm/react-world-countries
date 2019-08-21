@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 import Title from '../components/Title';
 
 import { messages, appSettings } from '../../data';
-import { CenteredCol } from '../../utils/styles';
+import { CenteredCol, cta } from '../../utils/styles';
 
 const CustomTitle = styled(Title)`
   padding: 20px 0;
@@ -23,17 +23,7 @@ const Caption = styled.p`
 `;
 
 const CustomNavLink = styled(NavLink)`
-  background-color: ${props => props.theme.btnBackground};
-  border-radius: 3px;
-  color: ${props => props.theme.white};
-  display: inline-block;
-  text-decoration: none;
-  padding: 10px 20px;
-  width: auto;
-
-  &:hover {
-    background-color: ${props => props.theme.btnBackgroundHover};
-  }
+  ${cta}
 `;
 
 const Home = () => (
