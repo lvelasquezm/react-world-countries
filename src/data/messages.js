@@ -11,5 +11,10 @@ export default {
     'Click the link below and see it by yourself.',
   appCta: 'Go to country list',
   countries: 'Countries',
-  languages: 'Languages'
+  languages: 'Languages',
+  locatedIn: 'Located in',
+  areaCode: 'Area Code (Phone Code)',
+  languagesSpoken: 'Languages they speak',
+  nativeHelper: ' which in their native is ',
+  currenciesUsed: 'Currencies they use'
 };

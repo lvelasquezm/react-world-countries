@@ -25,6 +25,10 @@ const mainPalette = {
   brownHover: '#A1887F',
   blueGray: '#B0BEC5',
   blueGrayHover: '#90A4AE',
+  cyan: '#80DEEA',
+  cyanHover: '#4DD0E1',
+  deepPurple: '#B39DDB',
+  deepPurpleHover: '#9575CD',
 };
 
 // Main font-family
@@ -60,5 +64,9 @@ export default {
   brown: mainPalette.brown,
   brownHover: mainPalette.brownHover,
   blueGray: mainPalette.blueGray,
-  blueGrayHover: mainPalette.blueGrayHover
+  blueGrayHover: mainPalette.blueGrayHover,
+  cyan: mainPalette.cyan,
+  cyanHover: mainPalette.cyanHover,
+  deepPurple: mainPalette.deepPurple,
+  deepPurpleHover: mainPalette.deepPurpleHover,
 };

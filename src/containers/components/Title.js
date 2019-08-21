@@ -9,6 +9,34 @@ const TitleElement = styled.div`
   font-size: ${props => props.size || '24px'}
   text-align: ${props => props.center ? 'center' : 'left'}
   color: ${props => props.color || props.theme.foreground}
+
+  &.color-AF {
+    color: ${props => props.theme.indigoHover};
+  }
+
+  &.color-AN {
+    color: ${props => props.theme.lightBlueHover};
+  }
+
+  &.color-AS {
+    color: ${props => props.theme.tealHover};
+  }
+
+  &.color-EU {
+    color: ${props => props.theme.purpleHover};
+  }
+
+  &.color-NA {
+    color: ${props => props.theme.orangeHover};
+  }
+
+  &.color-OC {
+    color: ${props => props.theme.brownHover};
+  }
+
+  &.color-SA {
+    color: ${props => props.theme.blueGrayHover};
+  }
 `;
 
 const Title = props => <TitleElement {...props}>{props.text}</TitleElement>;

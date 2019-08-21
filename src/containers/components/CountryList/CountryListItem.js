@@ -25,36 +25,6 @@ const ItemContainer = styled(Container)`
   }
 `;
 
-const CustomTitle = styled(Title)`
-  &.title-AF {
-    color: ${props => props.theme.indigoHover};
-  }
-
-  &.title-AN {
-    color: ${props => props.theme.lightBlueHover};
-  }
-
-  &.title-AS {
-    color: ${props => props.theme.tealHover};
-  }
-
-  &.title-EU {
-    color: ${props => props.theme.purpleHover};
-  }
-
-  &.title-NA {
-    color: ${props => props.theme.orangeHover};
-  }
-
-  &.title-OC {
-    color: ${props => props.theme.brownHover};
-  }
-
-  &.title-SA {
-    color: ${props => props.theme.blueGrayHover};
-  }
-`;
-
 const ItemBadge = styled.span`
   ${badge}
   font-size: 14px;
@@ -131,11 +101,11 @@ const CountryListItem = ({ country, history }) => (
   <ItemContainer onClick={() => history.push(`/countries/${country.code}`)}>
     <Row>
       <Col md="12" lg="12" xs="12">
-        <CustomTitle
+        <Title
           size="22px"
           text={country.name}
           display="inline-block"
-          className={`title-${country.continent.code}`}
+          className={`color-${country.continent.code}`}
         />
         <ItemBadge className={`badge-${country.continent.code}`}>
           {country.continent.name}
