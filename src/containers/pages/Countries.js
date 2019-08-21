@@ -23,7 +23,7 @@ const Countries = () => {
 
     if (loading) {
       content = <Loader />;
-    } else if (error) {
+    } else if (error || !data || !data.countries) {
       content = <p>{messages.errorLoadingCountries}</p>;
     } else {
       content = <CountryList countries={data.countries} />;
