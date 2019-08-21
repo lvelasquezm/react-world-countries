@@ -7,5 +7,6 @@ export default {
     'initial-scale=1, ' +
     'shrink-to-fit=no, ' +
     'viewport-fit=cover',
-  homeBackground: 'https://www.vinilodekorativo.com/642/mapamundi-hexagonos.jpg'
+  homeBackground: 'https://www.vinilodekorativo.com/642/mapamundi-hexagonos.jpg',
+  itemsPerPage: 40,
 };
