@@ -1,10 +1,13 @@
 import React from 'react';
+import { useQuery } from '@apollo/react-hooks';
 import styled from 'styled-components';
 import { Container, Row, Col } from 'styled-bootstrap-grid';
 
 import Title from '../components/Title';
+import Loader from '../components/Loader';
 
 import { messages } from '../../data';
+import { getCountry } from '../../utils/queries';
 
 const CustomTitle = styled(Title)`
   margin-bottom: 20px;
@@ -45,81 +48,74 @@ const InfoBox = styled.div`
   }
 `;
 
-const countryData = {
-  "code": null,
-  "name": "Zimbabwe",
-  "currency": "USD,ZAR,BWP,GBP,AUD,CNY,INR,JPY",
-  "phone": "263",
-  "languages": [
-    {
-      "name": "English",
-      "native": "English"
-    },
-    {
-      "name": "Shona",
-      "native": "chiShona"
-    },
-    {
-      "name": "North Ndebele",
-      "native": "Sindebele"
-    }
-  ],
-  "continent": {
-    "code": "AF",
-    "name": "Africa"
-  }
-};
+const Country = ({ match }) => {
+  const { loading, error, data } = useQuery(getCountry(match.params.code));
 
-const Country = ({ match }) => (
-  <Container>
-    <Row>
-      <Col md="12" lg="12" xs="12">
-        <CustomTitle
-          center
-          size="30px"
-          text={countryData.name}
-          className={`color-${countryData.continent.code}`}
-        />
-      </Col>
-    </Row>
-    <Row>
-      <Col md="6" lg="6" xs="12">
-        <InfoBox>
-          <span>{messages.locatedIn}</span>
-          <span>{countryData.continent.name}</span>
-        </InfoBox>
-      </Col>
-      <Col md="6" lg="6" xs="12">
-        <InfoBox>
-          <span>{messages.areaCode}</span>
-          <span>+{countryData.phone}</span>
-        </InfoBox>
-      </Col>
-    </Row>
-    <Row>
-      <Col md="12" lg="12" xs="12">
-        <InfoBox className="alternate">
-          <span>{messages.languagesSpoken}</span>
-          {
-            countryData.languages.map((language, i) => (
-              language.native && language.name &&
-                <div key={i} className="languages">
-                  <span>{language.name}</span> {messages.nativeHelper} <span>{language.native}</span>
-                </div>    
-            ))
-          }
-        </InfoBox>
-      </Col>
-    </Row>
-    <Row>
-      <Col md="12" lg="12" xs="12">
-        <InfoBox>
-          <span>{messages.currenciesUsed}</span>
-          <span>{countryData.currency}</span>
-        </InfoBox>
-      </Col>
-    </Row>
-  </Container>
-);
+  const renderContent = () => {
+    let content = null;
+
+    if (loading) {
+      content = <Loader />;
+    } else if (error) {
+      content = <p>{messages.errorLoadingCountry}</p>;
+    } else {
+      content = (
+        <Container>
+          <Row>
+            <Col md="12" lg="12" xs="12">
+              <CustomTitle
+                center
+                size="30px"
+                text={data.country.name}
+                className={`color-${data.country.continent.code}`}
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col md="6" lg="6" xs="12">
+              <InfoBox>
+                <span>{messages.locatedIn}</span>
+                <span>{data.country.continent.name}</span>
+              </InfoBox>
+            </Col>
+            <Col md="6" lg="6" xs="12">
+              <InfoBox>
+                <span>{messages.areaCode}</span>
+                <span>+{data.country.phone}</span>
+              </InfoBox>
+            </Col>
+          </Row>
+          <Row>
+            <Col md="12" lg="12" xs="12">
+              <InfoBox className="alternate">
+                <span>{messages.languagesSpoken}</span>
+                {
+                  data.country.languages.map((language, i) => (
+                    language.native && language.name &&
+                      <div key={i} className="languages">
+                        <span>{language.name}</span> {messages.nativeHelper} <span>{language.native}</span>
+                      </div>    
+                  ))
+                }
+              </InfoBox>
+            </Col>
+          </Row>
+          <Row>
+            <Col md="12" lg="12" xs="12">
+              <InfoBox>
+                <span>{messages.currenciesUsed}</span>
+                <span>{data.country.currency}</span>
+              </InfoBox>
+            </Col>
+          </Row>
+        </Container>
+      );
+    }
+
+    return content;
+  };
+
+  return renderContent();
+};
 
 export default Country;

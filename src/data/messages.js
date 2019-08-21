@@ -17,5 +17,6 @@ export default {
   languagesSpoken: 'Languages they speak',
   nativeHelper: ' which in their native is ',
   currenciesUsed: 'Currencies they use',
-  errorLoadingCountries: 'There was an error loading the country list.'
+  errorLoadingCountries: 'There was an error loading the country list.',
+  errorLoadingCountry: 'There was an error loading the country.'
 };

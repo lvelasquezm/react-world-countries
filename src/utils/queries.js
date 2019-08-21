@@ -16,3 +16,22 @@ export const getCountries = gql`
     }
   }
 `;
+
+export const getCountry = code => gql`
+  {
+    country (code: "${code}") {
+      code,
+      name,
+      currency,
+      phone,
+      languages {
+        name,
+        native
+      },
+      continent {
+        code,
+        name
+      }
+    }
+  }
+`;
