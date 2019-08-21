@@ -27,7 +27,12 @@ const CountryList = ({ countries }) => {
   // Function to handle scroll event. We make sure to only update our state
   // if user has reached the end of the page.
   const handleScroll = () => {
-    if (window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight) return;
+    if (
+      Math.ceil(window.innerHeight + document.documentElement.scrollTop) !==
+      document.documentElement.offsetHeight
+    ) {
+      return;
+    }
     setIsFetching(true);
   };
 
