@@ -28,7 +28,6 @@ describe('Root component <Root />', () => {
 
 describe('Home page <Home />', () => {
   let HomeWithRouter = null;
-
   beforeEach(() => {
     HomeWithRouter = mount(
       <MemoryRouter>
@@ -39,13 +38,13 @@ describe('Home page <Home />', () => {
 
   it('check app welcome message', () => {
     let appTitle = HomeWithRouter.find('.app-title').first().text();
-  	expect(appTitle).toEqual(messages.appWelcome);
+    expect(appTitle).toEqual(messages.appWelcome);
   });
-  
+
   it('check app CTA button text', () => {
     let ctaButtonText = HomeWithRouter.find('a').first().text();
-  	expect(ctaButtonText).toEqual(messages.appCta);
-	});
+    expect(ctaButtonText).toEqual(messages.appCta);
+  });
 });
 
 describe('Country list page <Countries />', () => {
@@ -91,7 +90,7 @@ describe('Country list page <Countries />', () => {
       firstItem
         .find('.country-list-item-languages')
         .length
-    ).toEqual(1);
+    ).toEqual(mockCountries[0].languages.length);
   });
 
   it('displays an error message when there is a failure fetching the list of countries', async () => {
