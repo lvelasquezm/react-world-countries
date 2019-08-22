@@ -17,8 +17,8 @@ You have received this directory within the .zip archive.
 2. Work on either task following the guidelines in `README.md` within chosen directory.
 3. Follow best practices of saving changes to the repo.
 4. Upload the repo to your personal Github account and share it with two collaborators:
-  1. `Yaass` username – Yassin Askar, co-founder of Scoutbase
-  2. `kuka` username – Kuanysh, consultant
+    - `Yaass` username – Yassin Askar, co-founder of Scoutbase
+    - `kuka` username – Kuanysh, consultant
 5. Expect a response within 10 working days after sharing the task, you’ll be contacted with the info you’ve provided during initial registration.
 
 ----------------------------------------------
