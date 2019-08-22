@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@apollo/react-common@^3.0.1":
+"@apollo/react-common@^3.0.0", "@apollo/react-common@^3.0.1":
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/@apollo/react-common/-/react-common-3.0.1.tgz#9c8f1433ddaddf80e471259126a76f1738dd4273"
   integrity sha512-7SC4qqPFo/41AhaQKCRovIshKkm4JLEGXyRHi+NPsaNJyk2J/HrWREnlHVqoPzYeIyq33f1L6j/NAkKn1NOnnQ==
@@ -18,6 +18,15 @@
     "@apollo/react-common" "^3.0.1"
     "@wry/equality" "^0.1.9"
     ts-invariant "^0.4.4"
+    tslib "^1.10.0"
+
+"@apollo/react-testing@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@apollo/react-testing/-/react-testing-3.0.0.tgz#8c8b1250570434edcbe168dfb2fd54ecf98e596c"
+  integrity sha512-AUhjWdIx3hgG/rwvg4Bf3GPw61BReh0feSO2Xa4mh9T+CqcKRb0OwmIwAdh/C0BoPf3zUKROBNd9IJhs80LPFA==
+  dependencies:
+    "@apollo/react-common" "^3.0.0"
+    fast-json-stable-stringify "^2.0.0"
     tslib "^1.10.0"
 
 "@babel/code-frame@7.5.5", "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.5.5":
@@ -10304,6 +10313,11 @@ w3c-xmlserializer@^1.1.2:
     domexception "^1.0.1"
     webidl-conversions "^4.0.2"
     xml-name-validator "^3.0.0"
+
+waait@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/waait/-/waait-1.0.5.tgz#6a3c7aaa88bd0a1a545e9d47890b9595bebf9aa7"
+  integrity sha512-wp+unA4CpqxvBUKHHv8D86fK4jWByHAWyhEXXVHfVUZfK+16ylpj7hjQ58Z8j9ntu8XNukRQT8Fi5qbyJ8rkyw==
 
 walker@^1.0.7, walker@~1.0.5:
   version "1.0.7"

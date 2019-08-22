@@ -98,16 +98,19 @@ const ItemMeta = styled.div`
 `;
 
 const CountryListItem = ({ country, history }) => (
-  <ItemContainer onClick={() => history.push(`/countries/${country.code}`)}>
+  <ItemContainer
+    className="country-list-item"
+    onClick={() => history.push(`/countries/${country.code}`)}
+  >
     <Row>
       <Col md="12" lg="12" xs="12">
         <Title
           size="22px"
           text={country.name}
           display="inline-block"
-          className={`color-${country.continent.code}`}
+          className={`color-${country.continent.code} country-list-item-name`}
         />
-        <ItemBadge className={`badge-${country.continent.code}`}>
+        <ItemBadge className={`badge-${country.continent.code} country-list-item-continent`}>
           {country.continent.name}
         </ItemBadge>
       </Col>
@@ -117,7 +120,7 @@ const CountryListItem = ({ country, history }) => (
           {
             country.languages.map((language, i) => (
               language.native && language.name &&
-                <div key={i}>
+                <div key={i} className="country-list-item-languages">
                   <span>{language.native}</span> or <span>{language.name}</span>
                 </div>    
             ))
