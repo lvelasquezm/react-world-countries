@@ -73,7 +73,7 @@ const Country = ({ match }) => {
                 center
                 size="30px"
                 text={data.country.name}
-                className={`color-${data.country.continent.code}`}
+                className={`color-${data.country.continent.code} country-name`}
               />
             </Col>
           </Row>
@@ -81,13 +81,13 @@ const Country = ({ match }) => {
             <Col md="6" lg="6" xs="12">
               <InfoBox>
                 <span>{messages.locatedIn}</span>
-                <span>{data.country.continent.name}</span>
+                <span className="country-continent">{data.country.continent.name}</span>
               </InfoBox>
             </Col>
             <Col md="6" lg="6" xs="12">
               <InfoBox>
                 <span>{messages.areaCode}</span>
-                <span>+{data.country.phone}</span>
+                <span className="country-phone-code">+{data.country.phone}</span>
               </InfoBox>
             </Col>
           </Row>
@@ -110,7 +110,7 @@ const Country = ({ match }) => {
             <Col md="12" lg="12" xs="12">
               <InfoBox>
                 <span>{messages.currenciesUsed}</span>
-                <span>{data.country.currency}</span>
+                <span className="country-currency">{data.country.currency}</span>
               </InfoBox>
             </Col>
           </Row>

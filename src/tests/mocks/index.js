@@ -72,7 +72,7 @@ export const mocks = [
   },
   {
     request: {
-      query: getCountry('DK')
+      query: getCountry(mockCountries[0].code)
     },
     result: {
       data: {
@@ -82,4 +82,8 @@ export const mocks = [
   }
 ];
 
-export default mocks;
+export const mockMatch = {
+  params: {
+    code: mockCountries[0].code
+  }
+};
