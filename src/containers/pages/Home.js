@@ -34,6 +34,7 @@ const Home = () => (
           center
           size="36px"
           text={messages.appWelcome}
+          className="app-title"
         />
       </CenteredCol>
       <CenteredCol md="12" lg="12" xs="12">
